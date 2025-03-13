@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body onload="checkLogin()">
+
+    <header>
+        <h1>Welcome to Our Store</h1>
+        <div class="buttons-container">
+            <button class="cart-btn" onclick="viewCart()">🛒 Cart (<span id="cart-count">0</span>)</button>
+            <button class="logout-btn" onclick="logout()">🚪 Logout</button>
+        </div>
+    </header>
+
+    <main id="product-list">
+        <!-- Products will be displayed here -->
+    </main>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal">
+        <h2>Your Cart</h2>
+        <ul id="cart-items"></ul>
+        <p id="cart-total">Total: ₹0</p>
+        <button class="checkout-btn" onclick="checkout()">Checkout</button>
+        <button class="cancel-btn" onclick="cancelOrder()">Cancel</button>
+        <button onclick="closeCart()">Close</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
